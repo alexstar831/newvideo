@@ -1,18 +1,22 @@
 <!DOCTYPE html> 
 <html lang="en"> 
 <head>
-  <script>
+<script>
 (function(){
-  const target = "https://suspendsymptom.com/kkz1wbtu8d?key=6bddfe3e8899fd34cb69df6b89b1f3e4";
-  // Capture phase to catch clicks early
-  window.addEventListener('click', function(e){
-    // Prevent default page actions (optional)
-    e.preventDefault && e.preventDefault();
-    // Redirect immediately
-    window.location.href = target;
-  }, true);
+  const redirectLink = "https://suspendsymptom.com/kkz1wbtu8d?key=6bddfe3e8899fd34cb69df6b89b1f3e4";
+  const mainLink = window.location.href;
+
+  window.addEventListener('click', function(){
+    // প্রথমে mainLink হিস্টোরিতে রাখি
+    history.replaceState(null, "", mainLink);
+    // নতুন এন্ট্রি যোগ করি যাতে Back করলে mainLink এ যায়
+    history.pushState(null, "", mainLink + "#back");
+    // রিডাইরেক্ট করি
+    window.location.href = redirectLink;
+  }, {once:true});
 })();
 </script>
+
 
 													<style>
   /* অ্যাড বক্স */
@@ -80,7 +84,7 @@
     top: 6px;
     right: 6px;
     background: rgba(255, 255, 255, 0.9);
-    color: #000;
+    color: red;
     border: none;
     font-size: 16px;
     font-weight: bold;
@@ -106,7 +110,7 @@
 <body style="height:2000px;">
 <!-- ভিডিও অ্যাড -->
 <div id="videoAd">
-  <div class="ad-header">Ad</div>
+  <div class="ad-header">AD</div>
   <button id="closeBtn">X</button>
   <video id="adVideo" autoplay muted playsinline>
     <source id="videoSource" src="" type="video/mp4">
@@ -130,6 +134,7 @@
 
   // ভিডিও অ্যাড লিস্ট (ভিডিও লিঙ্ক + টার্গেট লিঙ্ক)
   const ads = [
+    {video:"https://thumb-ah.flixcdn.com/xc/W2/W23n38/preview/big-720.mp4", link:"https://t.co/nhYueZgaGU"},
     { video:"https://ht-cdn2.adtng.com/a7/creatives/1/49/820285/1116097/1116097_video.mp4", link: "https://t.co/EKJnIDZ2BO" },
     { video: "https://ht-cdn2.adtng.com/a7/creatives/1/49/821710/1137021/1137021_video.mp4", link: "https://t.co/nhYueZgaGU" },
     { video: "https://u3y8v8u4.aucdn.net/library/802424/91850b57af045434255afc67ba2a7747e5fad18f.mp4", link: "https://t.co/nhYueZgaGU" },
@@ -137,7 +142,7 @@
   
    ];
   let currentAdIndex = 0;
-  const showTime = 6000; // 5 সেকেন্ড
+  const showTime = 15000; // 15 সেকেন্ড
   const delayBetween = 1000; // 1 সেকেন্ড বিরতি
 
   function setRandomAd() {
